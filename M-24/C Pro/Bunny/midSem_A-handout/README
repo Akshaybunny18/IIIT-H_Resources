@@ -1,0 +1,166 @@
+# README for MidSem Lab Exam
+
+## Overview
+
+This document outlines the MidSem Lab Exam, consisting of three programming problems designed to test your algorithmic skills and understanding of C programming. Each problem includes a detailed description, input/output formats, constraints, and sample test cases.
+
+## Problems
+
+### Problem 1: Pingala Storing Names
+
+**Description**:  
+Create a C program that allows the Pingala server to store a fixed number of names in an array. The program should support the following operations:
+- Add a name.
+- Display all names.
+- Exit the program.
+
+**Constraints**:
+- Maximum number of names: **10**
+- Maximum length of each name: **30 characters**
+- Use dynamic memory allocation for storing names.
+
+**Input Format**:
+- `1` to add a name.
+- `2` to display all names.
+- `0` to exit the program.
+
+**Sample Input 1**:
+```
+1
+Alice
+1
+Bob
+2
+0
+```
+
+**Sample Output 1**:
+```
+Names:
+Alice
+Bob
+```
+
+**Sample Input 2**:
+```
+1
+Alice
+1
+Bob
+1
+Charlie
+1
+David
+1
+Eve
+1
+Frank
+1
+Grace
+1
+Hannah
+1
+Ivy
+1
+Jack
+1
+Kate
+2
+0
+```
+
+**Sample Output 2**:
+```
+Cannot add more names. Maximum limit reached.
+Names:
+Alice
+Bob
+Charlie
+David
+Eve
+Frank
+Grace
+Hannah
+Ivy
+Jack
+```
+
+**Additional Notes**:
+Ensure to handle memory allocation properly and free any allocated memory before exiting the program to avoid memory leaks. If you encounter a Time Limit Exceeded (TLE) error, check the given conditions and feel free to modify your approach.
+
+---
+
+### Problem 2: Automated Robot Sorting
+
+**Description**:  
+Valera, a little robot, has studied sorting algorithms. He wrote a program that sorts an array of `n` integers in non-decreasing order. However, he might have made a mistake. You need to provide a counter-example that demonstrates the failure of his sorting algorithm. If no counter-example exists for the given value of `n`, print `-1`.
+
+**Input Format**:
+- A single integer `n` (1 ≤ n ≤ 50) — the size of the array.
+
+**Output Format**:
+- Print `n` space-separated integers (1 ≤ ai ≤ 100) that serve as a counter-example. If impossible, print `-1`.
+
+**Examples**:
+- **Sample Input 1**:
+```
+1
+```
+- **Sample Output 1**:
+```
+-1
+```
+- **Sample Input 2**:
+```
+3
+```
+- **Sample Output 2**:
+```
+3 2 1
+```
+
+---
+
+### Problem 3: Alien Buffet Feast
+
+**Description**:  
+After a space mission, astronaut Yash is invited to an alien buffet with various dishes arranged in a straight line. Each dish provides a different level of satisfaction. Yash can only take consecutive dishes. Your task is to help Yash maximize his total satisfaction by selecting a consecutive subarray of dishes.
+
+**Input**:
+- The first line contains an integer `n`, the number of dishes.
+- The second line contains `n` integers representing the happiness value of each dish.
+
+**Output**:
+- A single integer representing the maximum happiness Yash can achieve by selecting consecutive dishes.
+
+**Constraints**:
+- \( 1 ≤ n ≤ 10^5 \)
+- \( -1000 ≤ a[i] ≤ 1000 \)
+
+**Examples**:
+- **Input 1**:
+```
+5
+-1 -2 3 -1 -2
+```
+- **Output 1**:
+```
+3
+```
+- **Input 2**:
+```
+5
+1 2 3 -2 3
+```
+- **Output 2**:
+```
+7
+```
+
+---
+
+## Submission Guidelines
+- Do not rename any files given in the handout.
+- Only write the code in the specified C files in the respective directories.
+
+Good luck!

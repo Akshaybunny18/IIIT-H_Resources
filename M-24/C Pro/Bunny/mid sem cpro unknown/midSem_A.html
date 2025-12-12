@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MidSem</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0 auto;
+            max-width: 800px;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+
+        h2 {
+            color: #444;
+            margin-top: 30px;
+        }
+
+        h3 {
+            color: #555;
+        }
+
+        pre {
+            background-color: #f4f4f4;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 10px;
+            overflow-x: auto;
+            position: relative;
+        }
+
+        .copy-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #ddd;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        .copy-button:hover {
+            background-color: #ccc;
+        }
+
+        .copy-container {
+            display: inline-block;
+            position: relative;
+            margin-right: 10px;
+        }
+
+        .separator {
+            border-bottom: 1px solid #ddd;
+            margin: 40px 0;
+            height: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>MidSem Lab Exam 4</h1>
+    <div class="separator"></div>
+
+
+
+    <div class="separator"></div>
+
+    <h2>Problem 1: Dreamoon and Stairs</h2>
+    <p>
+        Dreamoon wants to climb up a stair of n steps. He can climb 1 or
+ 2 steps at each move. Dreamoon wants the number of moves to be a 
+multiple of an integer m.
+    </p>
+    <p>
+        What is the minimal number of moves making him climb to the top of the stairs that satisfies his condition?
+    </p>
+    
+    <h3>Input:</h3>
+    <ul>
+        <li>The single line contains two space-separated integers n and m.</li>
+    </ul>
+    
+    <h3>Output:</h3>
+    <ul>
+        <li>Print a single integer — the minimal number of moves being a multiple of m. If no such way exists, print -1.</li>
+    </ul>
+    
+    <h3>Constraints:</h3>
+    <ul>
+        <li><code>0 &lt; n ≤ 10000</code></li>
+        <li><code>1 &lt; m ≤ 10</code></li>
+    </ul>
+    
+    <h3>Example:</h3>
+    <h5>Input 1:</h5>
+    <pre><code>10 2</code></pre>
+    
+    <h5>Output 1:</h5>
+    <pre><code>6</code></pre>
+    
+    <h5>Input 2:</h5>
+    <pre><code>3 5</code></pre>
+    
+    <h5>Output 2:</h5>
+    <pre><code>-1</code></pre>
+    
+    <div class="separator"></div>
+
+    <h2>Problem 2: Trouble with Candies</h2>
+    <p>
+        Aaditya is in a candy shop where the candies come in three 
+vibrant colors: red (representing 0s), green (representing 1s), and blue
+ (representing 2s). Unfortunately, the candies have been mixed up in a 	
+		giant jar, and Aaditya cannot figure out how to sort them.
+</p>
+    <p>
+Your task is to help him sort this jar so that all the red candies (0s) 
+come first, followed by the green ones (1s), and finally, the blue ones 
+(2s). Think of it as arranging your favorite candies in a perfect 
+rainbow order.
+    </p>
+    <h3>Input Format:</h3>
+    <ul>
+        <li>The first line contains one integers: <b>N</b></li>
+
+        <li>Second line contains contains the values of all the candies seperated by space.</li>
+    </ul>
+    <h3>Output Format:</h3>
+    <ul>
+        <li>A sorted List of the candies.</li>
+    </ul>
+    <h3>Constraints:</h3>
+    <ul>
+        <li>0 ≤ N ≤ 100000000</li>
+    </ul>
+    <h3>Example:</h3>
+    
+    <h5>Input: </h5>
+    <pre><code><span class="copy-container">6
+0 1 2 0 1 2</span><button class="copy-button" onclick="copyToClipboard(this)">Copy</button></code></pre>
+    <h5>Output: </h5>
+    <pre><code>0 0 1 1 2 2</code></pre>
+    <h5>Explanation: </h5>
+    <p>We need to sort the candies
+    </p>
+    
+    <h3>Note:</h3>
+    <p> Take Care of the trailing space, i.e. Do not print the trailing white space.</p>
+
+    <div class="separator"></div>
+    
+    <h2>Problem 3:Unlocking the Vault of Xorland: The Power of XOR Queries</h2>
+    <p>
+        In a distant kingdom, there lived a group of scholars tasked with guarding a treasure vault filled with rare
+        artifacts. The king, fascinated by patterns and mysteries, created a secure vault system that was accessible
+        only by solving intricate puzzles. Each artifact in the vault was associated with a unique power level, and
+        these powers were stored in the form of a magical sequence of numbers. The key to the vault could only be
+        uncovered by performing a special operation on parts of this sequence.
+    </p>
+    <p>
+
+        The operation required was an XOR computation on sub-sections of the magical sequence, which the scholars
+        referred to as "The XOR Path of Secrets." To further complicate matters, the scholars had to answer a set of
+        challenges—queries given by the king—to unlock different sections of the vault. Each challenge asked them to
+        compute the XOR of a specific range of artifacts' powers, denoted by indices within the magical sequence.
+    </p>
+    <p>
+
+        You, as the most brilliant scholar of the realm, have been assigned this task. The king gives you a sequence of
+        power levels representing the artifacts, and for each query, you are to compute the XOR of the subarray from
+        index l to r.
+    </p>
+    <p>
+
+        Unlock the vault and reveal the hidden treasures by answering all the king's queries!
+
+    </p>
+
+    <h3>Input:</h3>
+    <ul>
+        <li>The first line contains an integer n, the size of the array.
+        </li>
+        <li>
+
+            The second line contains n integers, representing the power levels in the array.
+        </li>
+        <li>
+
+            The third line contains an integer q, the number of queries.
+        </li>
+        <li>
+
+            The next q lines contain two integers l and r for each query, representing the 1-based indices of the
+            subarray for which the XOR must be computed.</li>
+    </ul>
+
+    <h3>Output:</h3>
+    <ul>
+        <li>For each query, output a single integer, the XOR of the subarray from index l to r.
+        </li>
+    </ul>
+
+    <h3>Constraints:</h3>
+    <ul>
+        <li><code>1 ≤ n ≤ 2*10^5</code></li>
+        <li><code>1 ≤ q ≤ 2*10^5</code></li>
+        <li><code>0 ≤ a[i] ≤ 1e9</code></li>
+        <li><code>1≤l≤r≤n</code></li>
+    </ul>
+
+    <h3>Example:</h3>
+    <h5>Input 1:</h5>
+    <pre><code><span class="copy-container">5<br>3 8 2 6 4
+3
+1 3
+2 5
+1 5</span></code></pre>
+    <h5>Output 1:</h5>
+    <pre><code>9
+8
+11</code></pre>
+
+
+    <p>
+        </p><li>
+
+            For the first query (1, 3): XOR of elements from index 1 to 3 → 3 ^ 8 ^ 2 = 9
+        </li>
+        <li>
+
+            For the second query (2, 5): XOR of elements from index 2 to 5 → 8 ^ 2 ^ 6 ^ 4 = 8
+        </li>
+        <li>
+
+            For the third query (1, 5): XOR of elements from index 1 to 5 → 3 ^ 8 ^ 2 ^ 6 ^ 4 = 11
+
+        </li>
+    <p></p>
+
+    <div class="separator"></div>
+
+
+
+
+
+    <h2>Submission Guidelines</h2>
+    <ul>
+        <li>Do not rename any files given in the handout. Only write the code in the specified C files in the
+            respective
+            directories.</li>
+        
+
+    </ul>
+
+    <script>
+        function copyToClipboard(button) {
+            const copyText = button.previousElementSibling.textContent;
+            navigator.clipboard.writeText(copyText).then(() => {
+                button.textContent = "Copied!";
+                setTimeout(() => button.textContent = "Copy", 1500);
+            });
+        }
+    </script>
+
+
+</body></html>

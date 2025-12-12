@@ -1,0 +1,134 @@
+# Lab 1
+
+## Problem 1: Number Splitting
+
+Ninja Fruit is Yash's favourite game. Yash is also a math enthusiast. He wants to make another game called Math Ninja where instead of fruits, numbers get split. He wants you to help him with this task.
+
+You are given two integers, `a` and `b`. Your task is to split the integer `a` into two parts based on the position determined by the value of `b`. Specifically, the split should occur at the digit place corresponding to the value of `b`.
+
+For instance, if `b` is 10, the split should occur at the tens place of the integer `a`, meaning that the number will be divided into two parts: the first part will contain all digits up to the tens place, and the second part will contain the digits that follow. If `b` is 100, the split will happen at the hundreds place, and so on.
+
+Ignore any leading zeroes if any. For example, if `a = 1204` and `b = 10`, the output will be `12 4`.
+
+### Input Format:
+
+- A single line containing two integers `a` and `b`.
+
+### Constraints:
+
+- `0 ≤ a ≤ 1e8`
+- `1 ≤ b ≤ 1e6`
+- `b` is a power of 10.
+
+### Output Format:
+
+Print the two split integers with a space in between them. Print the left split first and then the right split separated by a space. Ignore any leading zeroes.
+
+### Example:
+
+**Input:**
+1234 10
+
+**Output:**
+12 34
+
+
+**Note:**
+
+In this example, `a = 1234` and `b = 10`. Splitting occurs at the tens place, dividing the number into `12` and `34`.
+
+**Input:**
+1204 10
+
+
+**Output:**
+12 4
+
+
+**Note:**
+
+In this example, `a = 1204` and `b = 10`. Splitting occurs at the tens place, dividing the number into `12` and `04`. We ignore the leading zero and just print `12` and `4`.
+
+---
+
+## Problem 2: Escape the Jail
+
+Sahil being very notorious, is caught by the police and is put in jail. He has a friend Tanishq who is also caught by the police and is put in the same jail. Sahil and Tanishq are very good friends and they have a habit of sharing everything. They have only one chance of escaping the jail. The Jailor Priet who is a mathematician has given them a chance to escape the jail. He has given them a task to solve. If they solve the task, they will be free to go. The task is as follows:
+
+Given an integer `x`, Sahil and Tanishq need to evaluate the expression `(x^2 + 3x + 2) / (x + 1)` and `x^3 + 5x^2 + x - 12` respectively. Print the values of the expression for both Sahil and Tanishq.
+
+### Input Format:
+
+- A single line contains an integer `x`.
+
+### Output Format:
+
+Print a line containing two integers, the first integer is the value of the expression `(x^2 + 3x + 2) / (x + 1)` and the second integer is the value of the expression `x^3 + 5x^2 + x - 12`.
+
+### Constraints:
+
+- `1 ≤ x ≤ 1e4`
+
+### Example:
+
+**Input:**
+3
+
+
+**Output:**
+5 63
+
+
+**Input:**
+1
+
+
+**Output:**
+3 -5
+
+
+---
+
+## Problem 3: Number Reversal
+
+You are given an integer `n`. Your task is to reverse the digits of the number `n` and print the reversed number.
+
+### Input Format:
+
+- A single line containing an integer `n`.
+
+### Output Format:
+
+Print the reversed number. Please do not print the leading zeroes in the number.
+
+### Constraints:
+
+- `100000 ≤ n ≤ 999999`
+
+### Example:
+
+**Input:**
+123456
+
+
+**Output:**
+654321
+
+
+**Input:**
+100200
+
+
+**Output:**
+2001
+
+
+---
+
+## Submission Guidelines
+
+- Do not rename any files given in the handout. Only write the code in the specified C files in the respective directories.
+
+
+
+

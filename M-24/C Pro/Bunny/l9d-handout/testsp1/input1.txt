@@ -1,0 +1,14 @@
+Create Dave
+Create Charlie
+Deposit Dave 36
+Transfer Dave Charlie 264
+Withdraw Charlie 259
+Withdraw Charlie 456
+Transfer Charlie Dave 252
+Transfer Charlie Dave 191
+Withdraw Charlie 294
+Transfer Charlie Dave 122
+Transfer Dave Charlie 160
+Create Alice
+Withdraw Dave 380
+Deposit Alice 727

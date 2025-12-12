@@ -1,0 +1,9 @@
+Insufficient funds for Eve.
+Insufficient funds for Dave.
+Insufficient funds for Dave.
+Insufficient funds for Eve.
+Charlie: 4358
+Dave: 615
+Alice: 347
+Eve: 898
+Bob: 1466

@@ -1,0 +1,12 @@
+struct Node* InsertNode(  struct Node* head1, struct  Node* temp,int x){
+    struct Node* head =  head1;
+    while(head!=NULL){
+        if(head->data == x){
+            struct Node* tempi =   head->next;
+            head->next = temp;
+            temp->next = tempi;
+            break ;
+        }
+        head = head->next;
+    }
+}

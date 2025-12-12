@@ -1,0 +1,18 @@
+Top 5 Stocks by Average Value:
+AMZN: Avg Value = 3400.00
+GOOGL: Avg Value = 2812.50
+AAPL: Avg Value = 152.86
+
+Top 5 Stocks by Average Value:
+AMZN: Avg Value = 3400.00
+GOOGL: Avg Value = 2812.50
+META: Avg Value = 380.00
+MSFT: Avg Value = 295.00
+AAPL: Avg Value = 153.50
+
+Top 5 Stocks by Average Value:
+AMZN: Avg Value = 3366.67
+GOOGL: Avg Value = 2812.50
+TSLA: Avg Value = 800.00
+NFLX: Avg Value = 500.00
+META: Avg Value = 380.00

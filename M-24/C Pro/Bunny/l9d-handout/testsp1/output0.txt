@@ -1,0 +1,9 @@
+User1 bought 10 shares of Stock1.
+User2 bought 20 shares of Stock2.
+User1 sold 5 shares of Stock1.
+Portfolio for User1:
+Stock: Stock1, Shares: 5, Total Value: 250.00
+Portfolio for User2:
+Stock: Stock2, Shares: 20, Total Value: 1500.00
+Stock: Stock1, Price: 50.00
+Stock: Stock2, Price: 75.00

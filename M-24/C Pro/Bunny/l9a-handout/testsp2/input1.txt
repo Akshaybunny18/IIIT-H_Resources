@@ -1,0 +1,6 @@
+Item1 15.0
+Item2 7.5
+Item1 Add 5
+Item1 Remove 2
+Item2 Add 4
+Item2 Remove 1

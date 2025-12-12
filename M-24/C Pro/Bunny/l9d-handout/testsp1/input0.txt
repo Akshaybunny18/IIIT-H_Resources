@@ -1,0 +1,10 @@
+AddUser User1
+AddUser User2
+AddStock Stock1 50.00
+AddStock Stock2 75.00
+Buy User1 Stock1 10
+Buy User2 Stock2 20
+Sell User1 Stock1 5
+Portfolio User1
+Portfolio User2
+List

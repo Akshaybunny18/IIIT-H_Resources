@@ -1,0 +1,9 @@
+1 101 Bob
+2 201 HarryPotter JkRowling 10.00 2
+2 202 LordOfTheRings JRRTolkien 15.00 2
+1 102 Alice
+5 101 Borrow 201
+5 102 Borrow 202
+6 101 Return 201
+3
+4

@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Endsem Set 3</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0 auto;
+            max-width: 800px;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+
+        h2 {
+            color: #444;
+            margin-top: 30px;
+        }
+
+        h3 {
+            color: #555;
+        }
+
+        pre {
+            background-color: #f7f7f7;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 10px;
+            overflow-x: auto;
+            position: relative;
+            color: #111111;
+        }
+
+        .copy-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #ddd;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        .copy-button:hover {
+            background-color: #f70606;
+        }
+
+        .copy-container {
+            display: inline-block;
+            position: relative;
+            margin-right: 10px;
+        }
+
+        .separator {
+            border-bottom: 1px solid #ddd;
+            margin: 40px 0;
+            height: 0;
+            width: 100%;
+        }
+        .code {
+            background-color: #f7f7f7;
+            border: 1px solid #ffffff;
+            border-radius: 4px;
+            padding: 10px;
+            overflow-x: auto;
+            position: relative;
+            color: #000000;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>EndSem Lab Exam Set 3 </h1>
+    <hr>
+
+    <h2>Problem 1: Grade Computing (60 points)</h2>
+<!-- <p> In an e-commerce platform, a system is needed to manage items in a shopping cart based on various operations provided in an input file. The system should keep track of the quantities and values of items in the cart, allowing for easy updates and display of item details. </p>  -->
+<p> In a school management system, there is a need to manage student grades based on operations provided in an input file. The system should keep track of each student's personal information and their scores in various subjects, calculate the total grade percentage, and print each student's grade summary in alphabetical order </p>
+<p> The input file, named <code>students.txt</code>, contains a list of operations to be applied to items in the student portal. Each operation will tell you the marks of the student in a specific subject </p>
+
+<p> Each line in the file follows one of the formats below: </p>
+
+<ul>
+    <li><b>Student Initialization:</b> <code>Student_Name Age </code>Initialises the name and the age for a student.</li>
+    <li><b>Add Marks (Out of 100):</b> <code>Student_Name Subject Marks </code> Update the student's marks for a specific subject. If there are multiple operations of adding marks to the same subject for a student, consider the highest one</li>
+</ul>
+
+<p> Your task is to: </p>
+<ol>
+    <li>Read and process each operation from the <code>students.txt</code> file.</li>
+    <li>Maintain a record of each Student's marksheet</li>
+    <li>In the end, calculate and return each student's total grade percentage (rounded to two decimal places).</li>
+    <li>This should be returned in the alphabetical order of the name</li>
+    <li>Note: Grade % will vary according to the number of subjects he has attempted</li>
+</ol>
+
+
+<p><b>Constraints:</b></p>
+<ul>
+    <li>Each line in <code>students.txt</code> represents a valid operation</li>
+    <li>Each student has a unique name, and age is a positive integer.</li>
+    <li>Number of Operations <= 1000</li>
+    <li>0 <= <code>marks</code> <= 100</li>
+</ul>
+
+<h3>Input Format:</h3>
+<p> The file <code>students.txt</code> contains lines formatted as follows: </p>
+<pre><code>Student_Name Age
+Student_Name Subject Marks</code></pre>
+
+<h3>Output Format:</h3>
+<p> Output the item's details in the following format: </p>
+<pre><code>Student_Name Grade_Percentage(Rounded to 2 decimals)</code></pre>
+
+<h3>Example File:</h3>
+<p>Suppose <code>students.txt</code> contains the following:</p>
+
+<pre><code>John Doe 18
+Jane 20
+John Math 85
+Jane Math 92
+John English 78
+Jane English 88
+John Math 90  <!-- Higher score replaces 85 for Math -->
+Jane Science 95</code></pre>
+
+<h3>Example Output:</h3>
+<pre><code>Jane Smith 91.67
+John Doe 84.00</code></pre>
+
+<h3>Notes:</h3>
+<ul>
+    <li>The program reads and parses each line of data, maintaining the current record of each student's subjects and marks.</li>
+    <li>For each subject, only the highest mark is kept if multiple entries exist.</li>
+    <li>The total grade percentage for each student is calculated based on the average of their highest scores in each subject, rounded to two decimal places.</li>
+</ul>
+
+
+
+
+    <div class="separator"></div>
+
+    <!-- <hr> -->
+    <h2>Problem 2: Avoid K Palindrome (60 points)</h2>
+    <p>
+        You are given a string <code>S</code> of length <code>N</code> consisting only of lowercase English letters.
+Find the number of strings obtained by permuting the characters of <code>S</code> (including
+the string <code>S</code> itself) that do not contain a palindrome of length <code>K</code> as a substring<br>
+
+    Here, a string <i>T</i> of length <i>N</i> is said to "contain a palindrome of length <i>K</i> as a substring" if and only if there exists a non-negative integer <i>i</i> not greater than (<i>N</i>−<i>K</i>) such that
+    <i>T<sub>i+j</sub> = T<sub>i+K+1-j</sub></i> for every integer <i>j</i> with 1 ≤ <i>j</i> ≤ <i>K</i>.
+    <br>
+    Here, <i>T<sub>K</sub></i> denotes the k-th character of the string <i>T</i>.
+
+    </p>
+
+    <h3>Input Format:</h3>
+    <ul>
+        <li>First line of input contains 2 integers <code>N</code> and <code>K</code>, the number of letters in the string and the length of palindrome to be avoided.</li>
+        <li>The string <code>S</code></li>
+    </ul>
+
+    <h3>Output Format:</h3>
+    <p>
+        <li>Print 1 line containing an integer: the answer to the question</li>
+    </p>
+
+    <h3>Constraints:</h3>
+    <ul>
+        <li> 1 ≤ <code>N</code> ≤ 10   </li>
+        <li> 1 ≤ <code>K</code> ≤ <code>N</code>   </li>
+    </ul>
+    <h3>Example</h3>
+    <h3>Input</h3>
+    <pre><code>3 2
+aab
+</code></pre>
+
+<h3>Output</h3>
+    <pre><code>1
+</code></pre>
+
+<h3>Input</h3>
+    <pre><code>10 5
+abcwxyzyxw
+</code></pre>
+
+<h3>Output</h3>
+    <pre><code>440640
+</code></pre>
+
+
+
+    <div class="separator"></div>
+
+
+     <h2>Problem 3: Library Inventory System (60 points)</h2>
+
+     <p>In a library management system, you need to maintain an inventory of books and handle various operations such as updating book quantities, initializing book prices, and calculating the total value of the books in the inventory.</p>
+
+     <p>The system reads commands from a file, processes each operation, and updates the inventory accordingly.</p>
+
+     <p>The input file, named <code>library_inventory.txt</code>, contains a list of operations to be applied to the books in the inventory. Each operation will either initialize a book's price, add or remove quantities of a book.</p>
+
+     <h3>Operations in the Input File</h3>
+     <p>Each line in the file follows one of the formats below:</p>
+
+     <ul>
+         <li><b>Price Initialization:</b> <code>BookTitle Price</code> – Sets the price for a book. If the book already exists, it updates the price.</li>
+         <li><b>Add/Remove Quantity:</b> <code>BookTitle Add Quantity</code> or <code>BookTitle Remove Quantity</code> – Adds or removes a specified quantity of the book from the inventory. The quantity should not go below zero.</li>
+     </ul>
+
+     <h3>Your Task</h3>
+     <p>Write a program that:</p>
+     <ol>
+         <li>Reads and processes each operation from the <code>library_inventory.txt</code> file.</li>
+         <li>Maintains a record of each book's price, quantity, and total value in the library inventory.</li>
+         <li>At the end of processing all commands, outputs the details for each book in the inventory, including:</li>
+         <ul>
+             <li>Title</li>
+             <li>Quantity</li>
+             <li>Total Value (calculated as Price * Quantity and rounded to two decimal places)</li>
+         </ul>
+         <li>If a book's quantity becomes zero, its total value should be zero.</li>
+     </ol>
+
+     <h3>Constraints:</h3>
+     <ul>
+         <li>Each line in <code>library_inventory.txt</code> represents a valid operation.</li>
+         <li>The number of operations ≤ 100.</li>
+         <li>The quantity for each <code>Add</code> or <code>Remove</code> operation is a positive integer.</li>
+         <li>The price for each book is between <code>0 &lt; Book_Price &lt;= 1000.00</code>.</li>
+         <li>Each book title is unique (case-sensitive).</li>
+     </ul>
+
+     <h3>Input Format</h3>
+     <p>The file <code>library_inventory.txt</code> contains lines formatted as follows:</p>
+
+     <pre><code>BookTitle Price
+BookTitle Add Quantity
+BookTitle Remove Quantity</code></pre>
+
+     <h3>Output Format</h3>
+     <p>Output the details of all books at the end, displaying their title, quantity, and total value, in the following format:</p>
+
+     <pre><code>BookTitle Quantity TotalValue</code></pre>
+
+     <h3>Example Input</h3>
+     <p>Suppose <code>library_inventory.txt</code> contains the following:</p>
+
+     <pre><code>Book1 15.0
+Book2 20.0
+Book1 Add 5
+Book2 Add 3
+Book1 Remove 2</code></pre>
+
+     <h3>Example Output</h3>
+
+     <pre><code>Book1 3 45.00
+Book2 3 60.00</code></pre>
+
+     <h3>Notes</h3>
+     <ul>
+         <li>The program reads and parses each line of the input file, maintaining the current price and quantity for each book.</li>
+         <li>The quantity should not go below zero. If the "Remove Quantity" operation would make the quantity negative, the quantity should remain zero.</li>
+         <li>The total value of a book is calculated as <code>Price * Quantity</code> and should be printed rounded to two decimal places.</li>
+     </ul>
+
+<div class="separator"></div>
+<h2> Submission Guidelines</h2>
+<p>Do not rename any files given in the handout. Only write the code in the specified C files in the respective directories. </p>
+
+    <script>
+        function copyToClipboard(button) {
+            const copyText = button.previousElementSibling.textContent;
+            navigator.clipboard.writeText(copyText).then(() => {
+                button.textContent = "Copied!";
+                setTimeout(() => button.textContent = "Copy", 1500);
+            });
+        }
+    </script>
+</body>
+
+</html>

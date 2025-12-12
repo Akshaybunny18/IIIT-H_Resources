@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EndSem Set 2</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0 auto;
+            max-width: 800px;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+
+        h2 {
+            color: #444;
+            margin-top: 30px;
+        }
+
+        h3 {
+            color: #555;
+        }
+
+        pre {
+            background-color: #f7f7f7;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 10px;
+            overflow-x: auto;
+            position: relative;
+            color: #111111;
+        }
+
+        .copy-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #ddd;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        .copy-button:hover {
+            background-color: #f70606;
+        }
+
+        .copy-container {
+            display: inline-block;
+            position: relative;
+            margin-right: 10px;
+        }
+
+        .separator {
+            border-bottom: 1px solid #ddd;
+            margin: 40px 0;
+            height: 0;
+            width: 100%;
+        }
+        .code {
+            background-color: #f7f7f7;
+            border: 1px solid #ffffff;
+            border-radius: 4px;
+            padding: 10px;
+            overflow-x: auto;
+            position: relative;
+            color: #000000;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>EndSem Lab Exam 2</h1>
+    <p> Course code: EndSem_Lab_Exam_2</p>
+    <p>Assessments code: set2 </p>
+    <p>To download the asmts, run: autolab download EndSem_Lab_Exam_2:set2 </p>
+    <p>Max Marks: 180</p>
+    <p>Duration: 3 hours, NO extension.</p>
+
+    <hr>
+    <h2>Problem 1: Parentheses Generator Machine (50 points)</h2>
+      <p>
+        Write a program that generates parentheses strings of a given length in lexicographic order satisfying a particular condition based on input parameters.
+        Each type of condition has a specific weightage, as described below.
+
+<br>
+Parentheses (()):
+<ul>
+
+    Parentheses are a pair of symbols:
+    <ul>
+
+        ( is the opening parenthesis.<br>
+        ) is the closing parenthesis.
+    </ul>
+</ul>
+
+<br>
+Lexicographic Order:
+<ul>
+
+    Lexicographic order is the dictionary order based on ASCII values. For parentheses:
+    <ul>
+
+        (  has an ASCII value of 40.<br>
+        )  has an ASCII value of 41.<br>
+    </ul>
+</ul>
+Strings are sorted such that ( comes before ) at any position.<br>
+Example of Lexicographic Order:<br>
+For strings of length 2(n=1):
+<code>
+<pre>
+((
+()
+)(
+)) </pre></code>
+
+    <h3>Input Format:<br></h3>
+    <ul>
+        n: Number of pairs of parentheses.<br>
+        flag: An integer (1, 2, or 3) that specifies the type of output:<br>
+        <ul>
+
+            1: Generate all possible parentheses strings of length 2n in lexicographic order. Weightage: 20%.<br>
+            2: Generate only valid parentheses strings (correctly nested strings) in lexicographic order. Weightage: 40%.<br>
+            3: Generate only invalid parentheses strings (incorrectly nested strings) in lexicographic order. Weightage: 40%.<br>
+        </ul>
+
+    </ul>
+
+
+    <h3>Output Format:</h3>
+    <p>
+        For flag = 1: Output all possible strings of length 2n in lexicographic order.<br>
+        For flag = 2: Output only valid strings where parentheses are balanced and properly nested.<br>
+        For flag = 3: Output only invalid strings where parentheses are unbalanced or improperly nested.<br>
+    </p>
+    <h3>Definitions</h3>
+    <p>
+        <b>What is Valid?<br></b>
+A parentheses string is valid if:
+<br>
+Every opening parenthesis ( has a matching closing parenthesis ).<br>
+At no point does the number of ) exceed the number of ( when reading left to right.<br>
+Examples of Valid Strings:<br>
+<code>
+<pre>
+()
+(()())
+((()))
+</pre>
+</code>
+<b>What is Invalid?</b>
+<p>
+A parentheses string is invalid if:<br>
+
+There are unmatched parentheses (too many ( or )).<br>
+Closing parentheses ) appear before a matching opening parenthesis (.<br>
+Examples of Invalid Strings:
+<br>
+<code>
+    <pre>
+())
+)(
+(((
+</pre>
+</code>
+</p>
+
+<h3>Example:</h3>
+
+<h4>Input</h4>
+<pre><code>2 1
+</code></pre>
+
+<h4>Expected Output:</h4>
+<pre><code>(())
+()()
+())(
+)(()
+)()(
+))((</code></pre>
+<h4>Input</h4>
+<pre><code>2 2
+</code></pre>
+
+<h4>Expected Output:</h4>
+<pre><code>(())
+()()</code></pre>
+<h4>Input</h4>
+<pre><code>2 3
+</code></pre>
+
+<h4>Expected Output:</h4>
+<pre><code>())(
+)(()
+)()(
+))((</code></pre>
+<h3>Constraints:</h3>
+<ul>
+    <li>n can be upto 10</li>
+    <li>flag can be 1, 2, or 3</li>
+</ul>
+
+
+
+    <div class="separator"></div>
+
+
+    <!-- <hr> -->
+    <h2>Problem 2: Professor X’s Gradebook Manager 📚 (60 points)</h2>
+
+    <p>
+        Professor X has been managing the grades for all his students for years. But even with his amazing abilities, he finds himself overwhelmed with the task of keeping track of student grades in an ever-growing class.
+        Unfortunately, his telepathic powers don’t extend to organizing his gradebook, and that’s where you come in! The professor has delegated the responsibility to you to manage the grades for his students.<br>
+        Your task is to design a system to add, modify, and delete student grades based on commands. You’ll need to manipulate a file that contains student records, ensuring that only valid operations are carried out on the gradebook.
+    </p>
+
+    <p>
+        You are given a file containing records of students with their corresponding grades. Each student is identified by a unique student ID. The operations you need to support include adding a new record, modifying an existing record, and deleting a record. At the end of the operations, you will also need to compute and display the maximum, minimum, and average score for the class.
+    </p>
+    <p>
+        Also Sort the records based on student_id and store it in the same text file. 50 marks for correct answer and 50 marks for storing correctly, an incorrect answer will be a direct zero even if file is correct.
+    </p>
+
+    <h3>Input Format:</h3>
+    <ul>
+        <li>A file called <code>students.txt</code> that contains records of student IDs and their grades. The format of each line in the file is:</li>
+        <pre><code>student_id marks</code></pre>
+        <li>Where <code>student_id</code> is a unique identifier for each student, and <code>marks</code> is the mark for the student.</li>
+        <li>On the terminal you will be given an integer <code>n</code> representing the number of queries and then n lines of queries.
+        <li>Each Query is of the form <code>op_id</code> <code>student_id</code> and may also have a third argument <code>marks</code> here <code>op_id</code> represents one of the following operations </li>
+            <ul>
+                <li><code>1 student_id marks</code> - Adds a new student record if the student ID doesn't already exist.</li>
+                <li><code>2 student_id marks</code> - Modifies the grades of an existing student, identified by their student ID.</li>
+                <li><code>3 student_id</code> - Deletes the record of the student identified by the student ID.</li>
+            </ul>
+            Here 1 , 2 , 3 are the op_id
+        </li>
+    </ul>
+
+    <h3>Operations to Perform:</h3>
+    <ul>
+        <li><strong>ADD:</strong> If the student ID does not exist in the gradebook, the record should be added. If the student ID already exists, do nothing.</li>
+        <li><strong>MODIFY:</strong> If the student ID exists, update the grades for the student. If the student ID does not exist, do nothing.</li>
+        <li><strong>DELETE:</strong> If the student ID exists, remove the student record. If the student ID does not exist, do nothing.</li>
+    </ul>
+
+    <h3>Output Format:</h3>
+    <p>
+        After all operations have been executed, print the maximum, minimum, and average score for each student in the format:
+        <pre><code>max_score_for_class min_score_for_class average_score_for_class</code></pre>
+    </p>
+
+    <h3>Example:</h3>
+
+    <h4>Initial File: <code>students.txt</code></h4>
+    <pre><code>1001 85
+1002 92
+1003 76</code></pre>
+
+    <h4>Operations:</h4>
+    <pre><code>3
+1 1004 88
+2 1002 95
+3 1003</code></pre>
+
+    <h4>Expected Output:</h4>
+    <pre><code>95 85 89.33</code></pre>
+    <h4>Final File: <code>students.txt</code></h4>
+    <pre><code>1001 85
+1002 95
+1004 88</code></pre>
+    Average should be capped off at 2 decimal points.
+    <h3>Constraints:</h3>
+    <ul>
+        <li>1 ≤ <code>n</code> ≤ 100 (Number of operations)</li>
+        <li>0 ≤ <code>marks</code> ≤ 100 (Each grade is a positive integer)</li>
+        <li>1 ≤ <code>no_students</code> ≤ 500 (Number of students)</li>
+    </ul>
+
+    <h3>Important Notes:</h3>
+    <ul>
+        <li>The student IDs in the <code>students.txt</code> file are unique, but may be modified during the operations.</li>
+        <li>After performing all the operations, display the final results showing the maximum, minimum, and average scores for each student still in the file.</li>
+        <li>If an operation is invalid (e.g., trying to delete a student who doesn’t exist), the system should simply ignore that operation.</li>
+        <li>Ensure the results are printed with a precision of two decimal places for the average score.</li>
+        <li>Save all changes made to students.txt in the same format as input this will also be checked.</li>
+    </ul>
+
+    <div class="separator"></div>
+
+
+    <h2>Problem 3: Contest System Management 🏆 (70 points)</h2>
+
+    <p>
+        You are tasked with managing the users and their ratings for an online contest system. The system must support the following operations: adding a new user, updating an existing user's rating, deleting a user, viewing a user's information, and printing the top-rated user.
+    </p>
+
+    <p>
+        Each user is identified by a unique username, and their performance is represented by a rating. You will need to read data from a log file containing operations on users and perform the corresponding actions.
+    </p>
+
+    <h3>Input Format:</h3>
+    <ul>
+        <li>A file called <code>file.txt</code> that contains logs of user operations. Each log line corresponds to a specific operation in the following format:</li>
+        <pre><code>action [username] [rating]</code></pre>
+        [username] and [rating] represents they may or may not be present.
+        <ul>
+            <li><code>action</code> can be one of the following:
+                <ul>
+                    <li><code>Add</code> – Creates a new user with the username and a default rating of 800 if the username does not already exist.</li>
+                    <li><code>Update</code> – Modifies the rating of an existing user by adding the given rating value to their current rating.</li>
+                    <li><code>Delete</code> – Deletes the user with the given username.</li>
+                    <li><code>View</code> – Displays the username and current rating of the specified user.</li>
+                    <li><code>TopCoder</code> – Prints the name of the user with the highest rating. If multiple users have the same rating, the user who was created first is printed.</li>
+                </ul>
+            </li>
+        </ul>
+
+    <h3>Operations to Perform:</h3>
+    <ul>
+        <li><strong>ADD:</strong> Adds a new user with the given username and default rating of 800.</li>
+        <li><strong>UPDATE:</strong> Updates the rating of an existing user by adding the given rating. </li>
+        <li><strong>DELETE:</strong> Deletes the user with the specified username.</li>
+        <li><strong>VIEW:</strong> Prints the username and rating of the specified user.</li>
+        <li><strong>TOPCODER:</strong> Prints the username of the highest-rated user.</li>
+    </ul>
+
+    <h3>Important Notes:</h3>
+    <ul>
+        <li>Usernames are case-sensitive, so <code>Priet</code> and <code>priet</code> are different.</li>
+        <li>If the log contains a <code>TopCoder</code> operation and there are no users, print <code>-1</code>.</li>
+        <li>If the log contains a <code>Delete</code> operation on a user that doesn't exist, print <code>-1</code>..</li>
+        <li>If the log contains a <code>View</code> operation on a user that doesn't exist, print <code>-1</code>.</li>
+        <li>If the log contains an <code>Update</code> operation on a user that doesn't exist, print <code>-1</code>.</li>
+        <li>Refer to the given examples for more clarity.</li>
+    </ul>
+
+    <h3>Additional Notes:</h3>
+    <ul>
+        <li>The program must print the highest-rated user based on the total rating and should print the first added user if there are ties.</li>
+        <li>Print all output results as specified (with user ratings where applicable, and top-rated user).</li>
+
+    </ul>
+
+    <h3>Constraints:</h3>
+    <ul>
+        <li>0 ≤ <code>n</code> ≤ 1000 (Number of operations)</li>
+        <!-- <li>0 ≤ <code>rating</code> ≤ 1000 (Each user's rating can be positive and non-zero)</li> -->
+        <li>1 ≤ <code>username</code>  ≤ 50 </li> (Length of the Username)
+        <li>0 ≤ <code>users</code> ≤ 1000 (Number of users in the system)</li>
+    </ul>
+
+    <h3>Example 1:</h3>
+
+    <h4>Initial File: <code>file.txt</code></h4>
+    <pre><code>Add Priet
+Update Priet -12
+View Priet
+Update Priet 100
+View Priet
+Delete Priet
+View Priet
+TopCoder</code></pre>
+
+    <h4>Expected Output:</h4>
+    <pre><code>Priet 788
+Priet 888
+-1
+-1</code></pre>
+
+    <h3>Example 2:</h3>
+
+    <h4>Initial File: <code>file.txt</code></h4>
+    <pre><code>Add Priet
+Update Priet -12
+Add CproTA
+Update Priet 100
+Update CproTA 88
+View Priet
+TopCoder
+Delete Priet
+Update priet 1000
+View Priet
+TopCoder</code></pre>
+
+    <h4>Expected Output:</h4>
+    <pre><code>Priet 888
+Priet
+-1
+-1
+CproTA</code></pre>
+
+
+
+<div class="separator"></div>
+<h2> Submission Guidelines</h2>
+<p>Do not rename any files given in the handout. Only write the code in the specified C files in the respective directories. </p>
+
+    <script>
+        function copyToClipboard(button) {
+            const copyText = button.previousElementSibling.textContent;
+            navigator.clipboard.writeText(copyText).then(() => {
+                button.textContent = "Copied!";
+                setTimeout(() => button.textContent = "Copy", 1500);
+            });
+        }
+    </script>
+</body>
+
+</html>

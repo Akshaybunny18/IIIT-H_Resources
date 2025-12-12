@@ -1,0 +1,105 @@
+# CPro Assignment 3
+
+**Course**: Computer Programming, Monsoon 2024  
+**Authors**: Lahari Sirisetti, Himani Belsare, Devesh Marwah  
+**Deadline**: 6th September, 2024, 11:59 PM
+
+## 1. Fibonacci Puzzle
+
+**Objective**: Write a C program to display the first `n` terms of the Fibonacci series.
+
+### Input
+- A single integer `n` (3 ≤ n ≤ 50), representing how many terms of the Fibonacci series to generate.
+
+### Output
+- The first `n` terms of the Fibonacci series printed on a single line, separated by spaces.
+
+### Example 1
+- **Input**: `n = 5`
+- **Output**: `0 1 1 2 3`
+
+### Example 2
+- **Input**: `n = 7`
+- **Output**: `0 1 1 2 3 5 8`
+
+---
+
+## 2. Jolly Number
+
+**Objective**: Write an algorithm to determine all Jolly numbers up to `N`.
+
+### Definition
+A Jolly number is a number that, when replaced by the sum of the squares of its digits repeatedly, eventually equals 1. The process should end within a maximum of 100 iterations.
+
+### Input
+- A single integer `N` (1 ≤ N ≤ 10,000).
+
+### Output
+- A list of all Jolly numbers from 1 up to `N`, separated by spaces.
+
+### Example 1
+- **Input**: `N = 19`
+- **Output**: `1 7 10 13 19`
+
+### Example 2
+- **Input**: `N = 2`
+- **Output**: `1`
+
+---
+
+## 3. Devesh Numbers
+
+**Objective**: Write a program to find all Devesh numbers between two integers `A` and `B`.
+
+### Definition
+A Devesh number is a positive integer that is divisible by the sum of its digits.
+
+### Input
+- Two integers `A` and `B` (1 ≤ A ≤ 100,000, 1 ≤ B ≤ 100,000, A ≤ B).
+
+### Output
+- A list of all Devesh numbers within the range `[A, B]` (both inclusive), separated by spaces.
+
+### Example
+- **Input**: `1 30`
+- **Output**: `1 2 3 4 5 6 7 8 9 10 12 18 20 21 24 27 30`
+
+---
+
+## 4. Sudoku Solver
+
+**Objective**: Write a function to determine if a 9×9 Sudoku board is valid according to specific rules.
+
+### Rules
+1. Each row must contain the digits 1-9 without repetition.
+2. Each column must contain the digits 1-9 without repetition.
+
+### Input
+- A 9x9 2D array containing digits from the range 1 to 9.
+
+### Output
+- `1` if the Sudoku board is valid.
+- `0` if the Sudoku board is invalid.
+
+### Example 1
+- **Input**:
+6 5 9 3 1 4 2 8 7 1 8 7 6 5 2 4 3 9 2 3 4 8 9 7 5 1 6 4 2 6 1 3 5 9 7 8 8 7 1 9 4 6 3 5 2 5 9 3 2 7 8 6 4 1 3 1 2 5 8 9 7 6 4 7 6 5 4 2 1 8 9 3 9 4 8 7 6 3 1 2 5
+
+- **Output**: `1`
+
+### Example 2
+- **Input**:
+5 3 4 6 5 8 9 1 2 6 7 2 1 9 5 3 4 8 1 9 8 3 4 2 5 6 7 8 5 9 7 6 1 4 2 3 4 2 6 8 2 3 7 9 1 7 1 3 9 2 4 8 5 6 9 6 1 5 3 7 2 8 4 2 8 7 4 8 9 6 3 5 3 4 4 2 8 6 1 7 9
+- **Output**: `0`
+
+---
+
+## Submission Guidelines
+
+- Ensure all code is well-documented with comments.
+- Include all source files and any necessary input/output examples.
+- Adhere to the deadline: **6th September, 2024, 11:59 PM**.
+
+---
+
+Good luck, and happy coding!

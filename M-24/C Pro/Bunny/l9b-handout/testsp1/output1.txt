@@ -1,0 +1,12 @@
+Insufficient funds for Dave.
+Insufficient funds for Charlie.
+Insufficient funds for Charlie.
+Insufficient funds for Charlie.
+Insufficient funds for Charlie.
+Insufficient funds for Charlie.
+Insufficient funds for Charlie.
+Insufficient funds for Dave.
+Insufficient funds for Dave.
+Dave: 36
+Charlie: 0
+Alice: 727
